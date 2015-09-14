@@ -1,0 +1,149 @@
+.login-button
+{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: lightgreen;
+  color: darkslategrey;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: arial;
+  width: 15%;
+  display: block;
+  margin: auto;
+}
+
+h1
+{
+  text-align: center;
+  font-family: arial;
+}
+
+.main
+{
+  width: 350px;
+  height: 250px;
+  background-color: gray;
+  margin:auto;
+  padding-left: auto;
+  padding-right: auto;
+  border-radius: 5px;
+}
+
+.login-container
+{
+  text-align: center;
+  margin: 5px;
+}
+
+.login-tab
+{
+  margin-left: auto;
+  background-color: lightgreen;
+  width: 75px;
+  font-family: arial;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-block;
+  margin-left: -4px;
+  border-radius: 5px;
+  color:black;
+}
+
+.login-tab a
+{
+  color:black;
+  text-decoration: none;
+}
+
+.login-tab-square-corners-topleft
+{
+  background-color: lightgreen;
+  height: 5px;
+  width: 5px;
+  position: relative;
+  float: left;
+  margin-top: -5px;
+}
+
+.login-tab-square-corners-bottomleft
+{
+  background-color: lightgreen;
+  height: 5px;
+  width: 5px;
+  position: relative;
+  float: left;
+  margin-top: 18px;
+  margin-bottom: -5px;
+}
+
+.login-tab-square-corners-bottomright
+{
+  background-color: lightgreen;
+  height: 5px;
+  width: 5px;
+  position: relative;
+  float: right;
+  margin-top: 18px;
+  margin-bottom: -5px;
+}
+
+.sign-up-tab
+{
+  margin-left: auto;
+  background-color: lightgray;
+  width: 75px;
+  font-family: arial;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-block;
+  margin-left: 200px;
+  border-radius: 5px;
+  color:black;
+  text-decoration: none;
+}
+
+.sign-up-tab a
+{
+  color:black;
+  text-decoration: none;
+}
+
+.sign-up-tab-square-corners-topleft
+{
+  background-color: lightgray;
+  height: 5px;
+  width: 5px;
+  position: relative;
+  float: left;
+  margin-top: -5px;
+}
+
+.sign-up-tab-square-corners-topright
+{
+  background-color: lightgray;
+  height: 5px;
+  width: 5px;
+  position: relative;
+  float: right;
+  margin-top: -5px;
+}
+
+.sign-up-tab-square-corners-bottomright
+{
+  background-color: lightgray;
+  height: 5px;
+  width: 5px;
+  position: relative;
+  float: right;
+  margin-top: 18px;
+  margin-bottom: -5px;
+}
+
+input
+{
+  text-align: center;
+}
