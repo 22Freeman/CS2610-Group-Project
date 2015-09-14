@@ -1,3 +1,37 @@
+.navbar
+{
+  width: auto;
+  height: 30px;
+}
+
+.navbar-title
+{
+    width: 500px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.before-nav-line
+{
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    margin-right: 10px;
+    vertical-align: text-top;
+    background-color: darkgray;
+}
+
+.after-nav-line
+{
+    width: 100px;
+    display: inline-block;
+    vertical-align: text-top;
+    height: 2px;
+    margin-left: 10px;
+    background-color: darkgray;
+}
+
 .login-button
 {
   padding-left: 10px;
@@ -16,6 +50,14 @@
 
 h1
 {
+    text-align: center;
+    font-family: arial;
+    display: inline-block;
+    color: darkgray;
+}
+
+h2
+{
   text-align: center;
   font-family: arial;
 }
@@ -25,9 +67,8 @@ h1
   width: 350px;
   height: 250px;
   background-color: gray;
-  margin:auto;
-  padding-left: auto;
-  padding-right: auto;
+  margin: auto;
+  margin-top: 150px;
   border-radius: 5px;
 }
 
@@ -39,7 +80,6 @@ h1
 
 .login-tab
 {
-  margin-left: auto;
   background-color: lightgreen;
   width: 75px;
   font-family: arial;
@@ -92,7 +132,6 @@ h1
 
 .sign-up-tab
 {
-  margin-left: auto;
   background-color: lightgray;
   width: 75px;
   font-family: arial;
