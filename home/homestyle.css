@@ -48,6 +48,14 @@
   margin: auto;
 }
 
+.login-container input
+{
+  text-align: center;
+  border-radius: 5px;
+  border-width: 0px;
+  height: 22px;
+}
+
 h1
 {
     text-align: center;
