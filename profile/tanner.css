@@ -1,0 +1,68 @@
+.navbar
+{
+  width: auto;
+  height: 30px;
+}
+
+.navbar-title
+{
+    width: 500px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.before-nav-line
+{
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    margin-right: 10px;
+    vertical-align: text-top;
+    background-color: darkgray;
+}
+
+.after-nav-line
+{
+    width: 100px;
+    display: inline-block;
+    vertical-align: text-top;
+    height: 2px;
+    margin-left: 10px;
+    background-color: darkgray;
+}
+
+h1
+{
+    text-align: center;
+    font-family: arial;
+    display: inline-block;
+    color: darkgray;
+}
+
+h2
+{
+  text-align: center;
+  font-family: arial;
+}
+
+img
+{
+  text-align: center;
+}
+
+.info-container
+{
+  text-align: center;
+  margin: 5px;
+}
+
+.main
+{
+  width: 350px;
+  height: 350px;
+  background-color: gray;
+  margin: auto;
+  margin-top: 150px;
+  border-radius: 5px;
+}
