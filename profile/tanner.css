@@ -1,63 +1,107 @@
+body
+{
+  margin: 0px;
+}
+
 .navbar
 {
-  width: auto;
-  height: 30px;
+  width: 100%;
+  height: 41px;
 }
 
-.navbar-title
+.navbar-upper
 {
-    width: 500px;
-    height: 30px;
-    margin: auto;
-    text-align: center;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  font-family: arial;
 }
 
-.before-nav-line
+.navbar-lower
 {
-    display: inline-block;
-    width: 100px;
-    height: 2px;
-    margin-right: 10px;
-    vertical-align: text-top;
-    background-color: darkgray;
+  width: 100%;
+  height: 20px;
+  display: inline-flex;
 }
 
-.after-nav-line
+.navbar-item
 {
-    width: 100px;
-    display: inline-block;
-    vertical-align: text-top;
-    height: 2px;
-    margin-left: 10px;
-    background-color: darkgray;
+  margin-right: auto;
 }
 
+.navbar-item a
+{
+  text-decoration: none;
+  color:black;
+}
+
+.navbar-lower .last-child
+{
+  margin-right: 20px;
+}
+
+.navbar-lower .first-child
+{
+  margin-left: 20px;
+}
+
+.divider
+{
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
 h1
 {
     text-align: center;
     font-family: arial;
     display: inline-block;
     color: darkgray;
+    font-size: 17px;
+    margin: 0px;
 }
+
+/* where my styling sheet starts for profile.html*/
 
 h2
 {
+  margin:auto;
+  line-height:51px;
+  vertical-align:middle;
   text-align: center;
   font-family: arial;
+
 }
 
-img
+input.tn-name
 {
-  text-align: center;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 10px;
+  margin-bottom:5px;
 }
 
-.info-container
-{
-  text-align: center;
-  margin: 5px;
+input.tn-email{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:5px;
+  margin-bottom: 5px;
 }
 
-.main
+textarea.tn-bio{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+img.tn-image{
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+}
+.tn-main
 {
   width: 350px;
   height: 350px;

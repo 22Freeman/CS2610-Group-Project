@@ -6,19 +6,28 @@
 
 <body>
   <div class="navbar">
-    <div class="navbar-title">
+    <!--<div class="navbar-title">
       <div class="before-nav-line"></div>
       <h1>App Name</h1>
       <div class="after-nav-line"></div>
+    </div>-->
+    <div class="navbar-upper"><h1>App Name</h1></div>
+    <div class="divider"></div>
+    <div class="navbar-lower">
+      <div class="navbar-item first-child"><a href="#">Link</a></div>
+      <div class="navbar-item"><a href="#">Link</a></div>
+      <div class="navbar-item"><a href="#">Link</a></div>
+      <div class="navbar-item"><a href="#">Link</a></div>
+      <div class="navbar-item last-child"><a href="#">Link</a></div>
     </div>
   </div>
 
-  <div class="main">
+  <div class="tn-main">
     <h2>Profile</h2>
-    <img src="image" alt="title" height="100px" width="100px" />
-    <div class="info-container"><input  type="text" name="Name" placeholder="Name"></div>
-    <div class="info-container"><input  type="text" name="Email Address" placeholder="Email Address"></div>
-    <div class="info-container"><input  type="text" name="Bio" placeholder="Bio"></div>
+    <img class="tn-image" alt=" 130x175" height="130px" width="175px"></img>
+    <input class="tn-name"  type="text" name="Name"  placeholder="Name"></input>
+    <input class="tn-email" type="email" size="30" placeholder="Email Address"></input>
+    <textarea class="tn-bio" type="textarea" placeholder="Bio" cols="30" rows="5"></textarea>
   </div>
 
 </body>
