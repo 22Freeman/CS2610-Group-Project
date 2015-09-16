@@ -1,10 +1,58 @@
-.navbar
+body
 {
-  width: auto;
-  height: 30px;
+  margin: 0px;
 }
 
-.navbar-title
+.navbar
+{
+  width: 100%;
+  height: 41px;
+}
+
+.navbar-upper
+{
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  font-family: arial;
+}
+
+.navbar-lower
+{
+  width: 100%;
+  height: 20px;
+  display: inline-flex;
+}
+
+.navbar-item
+{
+  margin-right: auto;
+}
+
+.navbar-item a
+{
+  text-decoration: none;
+  color:black;
+}
+
+.navbar-lower .last-child
+{
+  margin-right: 20px;
+}
+
+.navbar-lower .first-child
+{
+  margin-left: 20px;
+}
+
+.divider
+{
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+/*.navbar-title
 {
     width: 500px;
     height: 30px;
@@ -30,7 +78,7 @@
     height: 2px;
     margin-left: 10px;
     background-color: darkgray;
-}
+}*/
 
 .login-button
 {
@@ -62,6 +110,8 @@ h1
     font-family: arial;
     display: inline-block;
     color: darkgray;
+    font-size: 17px;
+    margin: 0px;
 }
 
 h2
