@@ -184,4 +184,10 @@ input
 {
   text-align: center;
   background-color: #f0f2f5;
+  color: #b6a9a9
+  outline:none;
+}
+
+input:focus {
+    outline: none;
 }
