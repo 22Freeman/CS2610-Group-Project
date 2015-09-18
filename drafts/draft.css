@@ -1,0 +1,20 @@
+body
+{
+  margin:0px;
+}
+
+.navbar-wrapper
+{
+  wdith:100%;
+  height: 60px;
+  background-color: #1a1717;
+}
+
+.main-wrapper
+{
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 1000px;
+  width: auto;
+  background-color: #f0f2f5;
+}
