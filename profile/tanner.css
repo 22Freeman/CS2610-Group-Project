@@ -101,6 +101,18 @@ img.tn-image{
   margin-left: auto;
   margin-right:auto;
 }
+
+button.tn-button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 40px;
+  margin-top: 5px;
+  color: black;
+  background-color: #5bb75b;
+  border-radius: 5px;
+}
 .tn-main
 {
   width: 350px;
