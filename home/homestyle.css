@@ -120,6 +120,17 @@ p
   color: #ffffff;
 }
 
+/*.login-tab:hover
+{
+  background-color: #51A451;
+  color: #ffffff;
+}
+
+.login-tab:hover .login-tab-square-corners, .login-tab.hover .login-tab-square-corners
+{
+  background-color: #51A451;
+}*/
+
 .sign-up-tab
 {
   background-color: #f0f2f5;
@@ -133,6 +144,17 @@ p
   text-decoration: none;
   color:#1a1717;
 }
+
+/*.sign-up-tab:hover
+{
+  background-color: #51A451;
+  color: #ffffff;
+}
+
+.sign-up-tab:hover .sign-up-tab-square-corners, .sign-up-tab.hover .sign-up-tab-square-corners
+{
+  background-color: #51A451;
+}*/
 
 .sign-up-tab-square-corners
 {
