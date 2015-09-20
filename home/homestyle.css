@@ -9,6 +9,11 @@ body
   font-family: arial;
 }
 
+button:focus
+{
+  outline: 0;
+}
+
 .navbar
 {
   width: 100%;
@@ -28,6 +33,22 @@ body
   width: 15%;
   display: block;
   margin: auto;
+  cursor: pointer;
+  cursor: hand;
+  border: none;
+  box-sizing: initial;
+  font-size: 15px;
+  border: 1px solid #1a1717;
+}
+
+.login-button:hover
+{
+  background-color: #51A451;
+}
+
+.login-button:focus
+{
+  border-color: #606062;
 }
 
 .login-container input
@@ -36,6 +57,12 @@ body
   border-radius: 5px;
   border-width: 0px;
   height: 22px;
+  border: 1px #1a1717 solid;
+}
+
+.login-container input:focus
+{
+  border-color: #606062;
 }
 
 h1
@@ -90,44 +117,7 @@ p
   margin-left: -4px;
   margin-right: -1px;
   border-radius: 5px;
-}
-
-.login-tab a
-{
-  color:#ffffff;
-  text-decoration: none;
-}
-
-.login-tab-square-corners-topleft
-{
-  background-color: #5bb75b;
-  height: 5px;
-  width: 5px;
-  position: relative;
-  float: left;
-  margin-top: -5px;
-}
-
-.login-tab-square-corners-bottomleft
-{
-  background-color: #5bb75b;
-  height: 5px;
-  width: 5px;
-  position: relative;
-  float: left;
-  margin-top: 18px;
-  margin-bottom: -5px;
-}
-
-.login-tab-square-corners-bottomright
-{
-  background-color: #5bb75b;
-  height: 5px;
-  width: 5px;
-  position: relative;
-  float: right;
-  margin-top: 18px;
-  margin-bottom: -5px;
+  color: #ffffff;
 }
 
 .sign-up-tab
@@ -141,40 +131,46 @@ p
   margin-left: 450px;
   border-radius: 5px;
   text-decoration: none;
-}
-
-.sign-up-tab a
-{
   color:#1a1717;
-  text-decoration: none;
 }
 
-.sign-up-tab-square-corners-topleft
+.sign-up-tab-square-corners
 {
   background-color: #f0f2f5;
   height: 5px;
   width: 5px;
   position: relative;
+}
+
+.login-tab-square-corners
+{
+  background-color: #5bb75b;
+  height: 5px;
+  width: 5px;
+  position: relative;
+}
+
+.top-left
+{
   float: left;
   margin-top: -5px;
 }
 
-.sign-up-tab-square-corners-topright
+.top-right
 {
-  background-color: #f0f2f5;
-  height: 5px;
-  width: 5px;
-  position: relative;
   float: right;
   margin-top: -5px;
 }
 
-.sign-up-tab-square-corners-bottomright
+.bottom-left
 {
-  background-color: #f0f2f5;
-  height: 5px;
-  width: 5px;
-  position: relative;
+  float: left;
+  margin-top: 18px;
+  margin-bottom: -5px;
+}
+
+.bottom-right
+{
   float: right;
   margin-top: 18px;
   margin-bottom: -5px;
