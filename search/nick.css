@@ -4,8 +4,14 @@ body {
 }
 
 #container {
-  padding-left: 3%;
-  padding-right: 3%;
+  width: 1150px;
+  margin: 0 auto;
+  background-color: #F0F2F5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#footer {
   width: 1150px;
   margin: 0 auto;
 }
@@ -72,40 +78,48 @@ text-align: left;
 }
 
 .main {
-  max-width: 910px;
+  max-width: 929px;
   float: left;
-  background-color: #F0F2F5;
   padding:15px;
-  border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+  border-right: solid 1px #A6A6A6;
+}
+
+.main h3 {
+  margin: 0 0 5px 0;
 }
 
 .side {
-  background-color: #F0F2F5;
   padding:15px;
   border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  width: 165px;
-  float: right;
+  width: 160px;
+  float: left;
   text-align: center;
+}
+
+.side h3 {
+  margin: 0 0 15px 0;
 }
 
 .ns-boxgrid {
   padding-top: 20px;
 }
 
-.ns-box {
-  width: 300px;
-  height: 200px;
+.ns-image {
+  border: solid 1px #A6A6A6;
+  padding: 5px;
+  width: 273px;
+  height: 182px;;
+  margin: 10px;
 }
 
 .ns-button {
-		padding: 5px 15px;
-		font-size:14px;
-		color: #ffffff;
-		border: solid 1px #4A924A;
-		background: #5bb75b;
-    border-radius: 5px;
+	padding: 5px 15px;
+	font-size:14px;
+	color: #ffffff;
+	border: solid 1px #4A924A;
+	background: #5bb75b;
+  border-radius: 5px;
 }
 
 .ns-button:hover {
@@ -117,10 +131,10 @@ text-align: left;
 }
 
 .ns-textinput {
-		padding: 5px 10px;
-		font-size: 14px;
-		border: 1px solid #BDBDBD;
-		border-radius: 5px;
+	padding: 5px 10px;
+	font-size: 14px;
+	border: 1px solid #BDBDBD;
+	border-radius: 5px;
 }
 
 .clearfix:after {
@@ -130,10 +144,3 @@ text-align: left;
     clear: both;
     visibility: hidden;
 }
-
-.clearfix {display: inline-block;}
-
-/* Hides from IE-mac \*/
-* html .clearfix {height: 1%;}
-.clearfix {display: block;}
-/* End hide from IE-mac */
