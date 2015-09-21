@@ -16,6 +16,10 @@ body {
   margin: 0 auto;
 }
 
+#welcome-text {
+  float: right;
+  margin: 8px 30px 0 0;
+}
 .navbar
 {
   height: 60px;
@@ -122,6 +126,12 @@ text-align: left;
   border-radius: 5px;
 }
 
+.ns-btn-search {
+  margin: 0 5px 0 -6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0px;
+}
+
 .ns-button:hover {
 		background: #51A451;
 }
@@ -134,7 +144,8 @@ text-align: left;
 	padding: 5px 10px;
 	font-size: 14px;
 	border: 1px solid #BDBDBD;
-	border-radius: 5px;
+	border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .clearfix:after {
