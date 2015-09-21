@@ -67,10 +67,19 @@ h1
   vertical-align: center;
   text-align: left;
 }
+
+.container {
+  width: 1150px;
+  margin: 0 auto;
+  background-color: #F0F2F5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .rf-table:after, .box-wrap::after
 {
     display: block;
-    content: " ";
+    content: "";
     clear: both;
 }
 .box-wrap
@@ -123,7 +132,13 @@ h1
   width: 100%;
 }
 
-#welcome-text {
+.welcome-text {
   float: right;
   margin: 8px 30px 0 0;
+}
+footer
+{
+  width: 1150px;
+  margin: 0 auto;
+
 }
