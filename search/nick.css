@@ -149,6 +149,11 @@ text-align: left;
   border-bottom-left-radius: 15px;
 }
 
+.error {
+  /*border: 1px solid red;*/
+  background-color: #FFBABA;
+}
+
 .clearfix:after {
     content: ".";
     display: block;
