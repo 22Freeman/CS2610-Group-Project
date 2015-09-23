@@ -202,6 +202,7 @@ h2
   height: auto;
   display: inline-block;
   width: 80%;
+  background-color: #ffffff;
 }
 
 .right-image-box img
@@ -219,4 +220,10 @@ h2
 .image-circles i
 {
   margin-right: -3px;
+  color: #D8D9DC;
+}
+
+.right-image-box img
+{
+  display: none;
 }
