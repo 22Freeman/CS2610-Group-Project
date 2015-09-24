@@ -9,8 +9,6 @@ $(document).ready(function(){
         ohSnap('search term cannot be blank', 'red');
     }
   })
-
-
 });
 
 $(document).ready(function () {
@@ -27,10 +25,7 @@ $(document).ready(function () {
             ohSnap('search has been saved', 'green');
         }
     })
-
-
 });
-
 
 /**
  * == OhSnap!.js ==
