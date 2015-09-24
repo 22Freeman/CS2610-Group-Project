@@ -6,7 +6,7 @@ $(document).ready(function(){
     var query = $('.ns-textinput').val();
 
     if (query === '') {
-        ohSnap('Error: Search term cannot be blank', 'red');
+        ohSnap('search term cannot be blank', 'red');
     }
   })
 
@@ -21,10 +21,10 @@ $(document).ready(function () {
         var query = $('.ns-textinput').val();
 
         if (query === '') {
-            ohSnap('Error: Search term cannot be blank', 'red');
+            ohSnap('search term cannot be blank', 'red');
         }
         else {
-            ohSnap('Search has been saved', 'green');
+            ohSnap('search has been saved', 'green');
         }
     })
 

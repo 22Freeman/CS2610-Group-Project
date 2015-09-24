@@ -171,9 +171,24 @@ text-align: left;
 /*leave empty do not delete*/
 }
 
+.btn-comments {
+  padding: 5px 10px;
+  color: #ffffff;
+  border: solid 1px #4A924A;
+  background: #5bb75b;
+  border-radius: 2px;
+  color: #51A451;
+  background: #FFF;
+  font-size: 12px;
+  border: 2px solid;
+}
+
+.btn-comments:hover {
+  background: #E0E0E0 ;
+}
+
 .btn-ss {
   padding: 5px 15px;
-  font-size:14px;
   color: #ffffff;
   border: solid 1px #4A924A;
   background: #5bb75b;
@@ -198,28 +213,6 @@ text-align: left;
   margin-bottom: 10px;
 }
 
-.btn-close {
-	background-color: #FFF;
-	text-indent: -2px;
-	border: 1px solid #dcdcdc;
-	color: #777777;
-	font-size: 12px;
-	font-weight: bold;
-	font-style: normal;
-	height: 17px;
-	line-height: 14px;
-	width: 18px;
-position: static;
-}
-
-.btn-close:hover {
-	background-color: #dfdfdf;
-}
-
-.btn-close:active {
-	position: relative;
-}
-
 .ns-textinput {
 	padding: 5px 10px;
 	font-size: 14px;
@@ -232,8 +225,9 @@ position: static;
   position: absolute;
   font-size: 18px;
   font-weight: 400;
-  border-radius: 5px;
-  margin: 5px auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0 auto;
   width: 450px;
   top: 0;
   left: 0;
