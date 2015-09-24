@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #F0F2F5;
+
 }
 
 #container {
@@ -106,8 +107,23 @@ text-align: left;
   margin: 0 0 15px 0;
 }
 
-.ns-boxgrid {
+.box-container {
   padding-top: 20px;
+}
+
+.box {
+  width: 273px;
+  border: solid 1px #CCC;
+  float: left;
+  padding: 5px;
+  margin: 0 10px 10px 10px;
+}
+
+.box img {
+  display: block;
+  margin: 0 0 10px 0;
+  width: 272px;
+  height: 165px;
 }
 
 .ns-image {
@@ -118,7 +134,7 @@ text-align: left;
   margin: 10px;
 }
 
-.ns-button {
+.ns-btn {
 	padding: 5px 15px;
 	font-size:14px;
 	color: #ffffff;
@@ -127,18 +143,81 @@ text-align: left;
   border-radius: 5px;
 }
 
+.hr-image hr {
+  margin: -7px 0 4px 0;
+  background-color: #009900;
+  color: #009900;
+  border:none;
+  height: .11em;
+}
+
+.btn-right {
+  float: right;
+  border-radius: 2px;
+}
+
+.btn-left {
+  float: left;
+  border-radius: 2px;
+}
+
 .ns-btn-search {
   margin: 0 5px 0 -6px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0px;
 }
 
-.ns-button:hover {
+.ns-btn-savesearch {
+/*leave empty do not delete*/
+}
+
+.btn-ss {
+  padding: 5px 15px;
+  font-size:14px;
+  color: #ffffff;
+  border: solid 1px #4A924A;
+  background: #5bb75b;
+  border-radius: 2px;
+
+  color: #51A451;
+  font-weight: bold;
+  background: #FFF;
+  font-size: 15px;
+  border: 2px solid;
+}
+
+.btn-ss:hover {
+  background: #F0F0F0 ;
+}
+
+.ns-btn:hover {
 		background: #51A451;
 }
 
 .itemlist button {
   margin-bottom: 10px;
+}
+
+.btn-close {
+	background-color: #FFF;
+	text-indent: -2px;
+	border: 1px solid #dcdcdc;
+	color: #777777;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: normal;
+	height: 17px;
+	line-height: 14px;
+	width: 18px;
+position: static;
+}
+
+.btn-close:hover {
+	background-color: #dfdfdf;
+}
+
+.btn-close:active {
+	position: relative;
 }
 
 .ns-textinput {
@@ -149,9 +228,31 @@ text-align: left;
   border-bottom-left-radius: 15px;
 }
 
-.error {
-  /*border: 1px solid red;*/
-  background-color: #FFBABA;
+.alert {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 5px;
+  margin: 5px auto;
+  width: 450px;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.alert-red {
+  color: white;
+  background-color: #A80000;
+  border: 1px solid #A80000;
+}
+
+.alert-green {
+  color: white;
+  background-color: #3c763d;
+  border: 1px solid #3c763d;
 }
 
 .clearfix:after {
@@ -160,4 +261,9 @@ text-align: left;
     height: 0;
     clear: both;
     visibility: hidden;
+}
+
+.center-text {
+  margin: 0 0 5px 10px;
+  font-size: 14px;
 }
