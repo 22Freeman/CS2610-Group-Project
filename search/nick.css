@@ -1,7 +1,6 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #F0F2F5;
-
 }
 
 #container {
@@ -20,6 +19,14 @@ body {
 .welcome-text {
   float: right;
   margin: 10px 30px 0 0;
+}
+
+.welcome-text a {
+  color: #4A924A
+}
+
+.welcome-text a:hover {
+  color: #346634
 }
 
 .navbar
