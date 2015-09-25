@@ -29,8 +29,7 @@ body {
   color: #346634
 }
 
-.navbar
-{
+.navbar {
   height: 60px;
   line-height: 60px;
   vertical-align: middle;
@@ -40,8 +39,7 @@ body {
   border-top-right-radius: 5px;
 }
 
-.navbar-upper
-{
+.navbar-upper {
   padding-right: 1%;
   padding-left: 1%;
   display: inline-block;
@@ -56,8 +54,7 @@ vertical-align: center;
 text-align: left;
 }
 
-.navbar-lower
-{
+.navbar-lower {
   vertical-align: top;
   line-height: 60px;
   display: inline-block;
@@ -67,8 +64,7 @@ text-align: left;
   margin-left: 5px;
 }
 
-.navbar-item
-{
+.navbar-item {
   margin-right: auto;
   vertical-align: top;
   line-height: 60px;
@@ -79,14 +75,12 @@ text-align: left;
   margin-left: 5px;
 }
 
-.navbar-item a
-{
+.navbar-item a {
   text-decoration: none;
   color: white;
 }
 
-.navbar-item a:hover
-{
+.navbar-item a:hover {
   color: #5bb75b;
 }
 
