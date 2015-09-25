@@ -112,21 +112,42 @@ h1
 
 .rf-buttonLeft
 {
-  background:#ffffff;
-  border: solid 1px #cccccc;
-  height: 35px;
-  width: 100px;
-  text-align: center;
+  padding: 5px 10px;
+  color: #ffffff;
+  border: solid 1px #4A924A;
+  background: #5bb75b;
+  border-radius: 2px;
+  color: #51A451;
+  background: #FFF;
+  font-size: 12px;
+  border: 2px solid;
   float: left;
 }
+.rf-buttonLeft:hover
+{
+  color: #fff;
+  background: #5bb75b;
+  border: solid 2px #5bb75b;
+}
+
 .rf-buttonRight
 {
-  background:#ffffff;
-  border: solid 1px #cccccc;
-  height: 35px;
-  width: 100px;
-  text-align: center;
+  padding: 5px 10px;
+  color: #ffffff;
+  border: solid 1px #4A924A;
+  background: #5bb75b;
+  border-radius: 2px;
+  color: #51A451;
+  background: #FFF;
+  font-size: 12px;
+  border: 2px solid;
   float: right;
+}
+.rf-buttonRight:hover
+{
+  color: #fff;
+  background: #5bb75b;
+  border: solid 2px #5bb75b;
 }
 
 .box-wrap
