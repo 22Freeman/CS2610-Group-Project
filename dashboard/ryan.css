@@ -1,3 +1,12 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body
 {
   margin-left: 9%;
@@ -6,6 +15,8 @@ body
   margin-top: 0;
   width: 100%auto;
   background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 .navbar
@@ -84,6 +95,10 @@ h1
     content: " ";
     clear: both;
 }
+.rf-table
+{
+  align: center;
+}
 .box-wrap
 {
   position: relative;
@@ -95,12 +110,23 @@ h1
   align-items: center;
 }
 
-.rf-buttonTwo
+.rf-buttonLeft
 {
   background:#ffffff;
   border: solid 1px #cccccc;
   height: 35px;
   width: 100px;
+  text-align: center;
+  float: left;
+}
+.rf-buttonRight
+{
+  background:#ffffff;
+  border: solid 1px #cccccc;
+  height: 35px;
+  width: 100px;
+  text-align: center;
+  float: right;
 }
 
 .box-wrap
@@ -125,7 +151,7 @@ h1
 .boxes:nth-child(3n)
 {
   margin-right: 0%;
-  margin-bottom: 0%;
+  margin-bottom: 2%;
 }
 .boxes img
 {
