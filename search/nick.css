@@ -1,6 +1,9 @@
+
+
 body {
   font-family: Arial, sans-serif;
   background-color: #F0F2F5;
+  margin: 0;
 }
 
 #container {
@@ -35,8 +38,7 @@ body {
   vertical-align: middle;
   background-color: #1a1717;
   padding-left: 9%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+
 }
 
 .navbar-upper {
