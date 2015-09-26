@@ -3,8 +3,11 @@
 
   <title>App Name</title>
   <meta name = "charset" content="utf-8">
+
   <link rel="stylesheet" type="css" href="ryan.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+  <script src="ryan.js"></script>
 </head>
 <body>
   <div class="container">
@@ -23,46 +26,46 @@
 <div class ="rf-imageTable">
   <div class="rf-table">
     <div class="box-wrap">
-      <div class="boxes">
-        <img class="rf-image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
+      <div id ="rf-boxes" class="boxes">
+        <img class="rf_image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
         <div class="rf-button">
-          <button class="rf-buttonLeft" text="button" type="button">Likes <!--<i class="fa fa-thumbs-up">--></button>
-          <button class="rf-buttonRight" text="button"type="button">Comments <!-- <i class="fa fa-comments"></i>--></button>
+          <button class="rf-buttonLeft" text="button" type="button">Like <i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" text="button"type="button">Comment <i class="fa fa-comments"></i></button>
         </div>
       </div>
-      <div class="boxes">
-        <img class="rf-image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
+      <div id ="rf-boxes" class="boxes">
+        <img class="rf_image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
         <div class="rf-button">
-          <button class="rf-buttonLeft" text="button" type="button">Likes <!--<i class="fa fa-thumbs-up">--></button>
-          <button class="rf-buttonRight" text="button"type="button">Comments <!-- <i class="fa fa-comments"></i>--></button>
+          <button class="rf-buttonLeft" text="button" type="button">Like <i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" text="button"type="button">Comment <i class="fa fa-comments"></i></button>
         </div>
       </div>
-      <div class="boxes">
-        <img class="rf-image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
+      <div id ="rf-boxes" class="boxes">
+        <img class="rf_image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
         <div class="rf-button">
-          <button class="rf-buttonLeft" text="button" type="button">Likes <!--<i class="fa fa-thumbs-up">--></button>
-          <button class="rf-buttonRight" text="button"type="button">Comments <!-- <i class="fa fa-comments"></i>--></button>
+          <button class="rf-buttonLeft" text="button" type="button">Like <i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" text="button"type="button">Comment <i class="fa fa-comments"></i></button>
         </div>
       </div>
-      <div class="boxes">
-        <img class="rf-image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
+      <div id ="rf-boxes" class="boxes">
+        <img class="rf_image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
         <div class="rf-button">
-          <button class="rf-buttonLeft" text="button" type="button">Likes <!--<i class="fa fa-thumbs-up">--></button>
-          <button class="rf-buttonRight" text="button"type="button">Comments <!-- <i class="fa fa-comments"></i>--></button>
+          <button class="rf-buttonLeft" text="button" type="button">Like <i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" text="button"type="button">Comment <i class="fa fa-comments"></i></button>
         </div>
       </div>
-      <div class="boxes">
-        <img class="rf-image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
+      <div id ="rf-boxes" class="boxes">
+        <img class="rf_image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
         <div class="rf-button">
-          <button class="rf-buttonLeft" text="button" type="button">Likes <!--<i class="fa fa-thumbs-up">--></button>
-          <button class="rf-buttonRight" text="button"type="button">Comments <!-- <i class="fa fa-comments"></i>--></button>
+          <button class="rf-buttonLeft" text="button" type="button">Like <i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" text="button"type="button">Comment <i class="fa fa-comments"></i></button>
         </div>
       </div>
-      <div class="boxes">
-        <img class="rf-image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
+      <div id ="rf-boxes" class="boxes">
+        <img class="rf_image" src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img>
         <div class="rf-button">
-          <button class="rf-buttonLeft" text="button" type="button">Likes <!--<i class="fa fa-thumbs-up">--></button>
-          <button class="rf-buttonRight" text="button"type="button">Comments <!-- <i class="fa fa-comments"></i>--></button>
+          <button class="rf-buttonLeft" text="button" type="button">Like <i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" text="button"type="button">Comment <i class="fa fa-comments"></i></button>
         </div>
       </div>
     </div>
@@ -72,4 +75,9 @@
 <footer>
   <p>Footer goes here</p>
 </footer>
+<script>
+$(document).ready(function(){
+	$('.rf_image').rf_image_box();
+});
+</script>
 </body>
