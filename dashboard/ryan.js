@@ -7,11 +7,8 @@
 		// Default parameters
 
 		var options = $.extend({
-			height : "300",
+			height : "500",
 			width : "500",
-			title:"JQuery Modal Box Demo",
-			description: "Example of how to create a modal box.",
-      images: "https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif",
 			top: "20%",
 			left: "30%",
 		},prop);
@@ -54,7 +51,8 @@
 			});
       $('.rf_image_button_like').css({
         'position' : 'relative',
-        'float': 'right',
+        'float': 'bottom',
+				'margin-left': '45%',
         'height': '30px',
         'width': '50px',
         'color': '#51A451',
@@ -84,6 +82,17 @@
 				'-moz-border-radius':'10px',
 				'-webkit-border-radius':'10px'
 			});
+			$('.rf_insta_image').css({
+				'height':(options.height - 150) + 'px',
+				'width':(options.width - 100) + 'px',
+				'display':'inline-block',
+				'position':'relative',
+				'padding':'5px',
+				'margin':'8px',
+				'border-radius':'5px',
+				'-moz-border-radius':'10px',
+				'-webkit-border-radius':'10px'
+			});
 		}
 
 		 function add_block_page(){
@@ -93,7 +102,7 @@
 		}
 
 		 function add_popup_box(){
-			 var pop_up = $('<div class="rf_image_box"><a href="#" class="rf_image_close"><i class="fa fa-times fa-4x"></i></a><div class="rf_image_inner_box"><img src="https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img><button class="rf_image_button_like" text="button"type="button">Like</button></div></div>');
+			 var pop_up = $('<div class="rf_image_box"><a href="#" class="rf_image_close"><i class="fa fa-times fa-4x"></i></a><div class="rf_image_inner_box"><img class="rf_insta_image" src = "https://www.eclipsewebmedia.com/wp-content/uploads/placeholdit.gif"></img><button class="rf_image_button_like" text="button"type="button">Like</button></div></div>');
 			 $(pop_up).appendTo('.rf_image_block_page');
 
 			 $('.rf_image_close').click(function(){
