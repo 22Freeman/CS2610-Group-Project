@@ -1,11 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res) {
+function home(req, res)
+{
   res.render('home', {
-    title: 'T',
-    welcome: 'W'
+    title:'Googlegram+',
+    javascript:'/html/home/login.js',
+    stylesheet:'/html/home/login.css'
   })
-})
+}
+
+router.get('/', home);
 
 module.exports = router
