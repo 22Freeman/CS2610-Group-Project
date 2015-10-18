@@ -1,20 +1,17 @@
 var express	= require('express');
-var port    = 3000;
+var path = require('path');
 var exphbs  = require('express-handlebars');
+var port    = 3000;
+var homeRoutes = require('./routes/homeRoutes');
+
 var app = express();
 
 app.engine('handlebars', exphbs({defaultLayout:'base'}));
 app.set('view engine', 'handlebars');
 
-function home(req, res) {
-  res.render('home', {
-    title:'Title',
-    welcome:'welcome'
-  }
-)}
+app.use('/', homeRoutes);
 
-//routes
-app.get('/', home);
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port)
 
