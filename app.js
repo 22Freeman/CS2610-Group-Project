@@ -4,6 +4,7 @@ var exphbs  = require('express-handlebars');
 var port    = 3000;
 var homeRoutes = require('./routes/homeRoutes');
 var profileRoutes = require('./routes/profileRoutes');
+var searchRoutes = require('./routes/searchRoutes')
 
 var app = express();
 
@@ -13,6 +14,8 @@ app.set('view engine', 'handlebars');
 app.use('/', homeRoutes);
 
 app.use('/profile', profileRoutes);
+
+app.use('/search', searchRoutes);
 
 app.use(express.static(path.join(__dirname, 'public')));
 

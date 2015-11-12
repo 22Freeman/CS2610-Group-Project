@@ -3,7 +3,7 @@ var querystring = require('querystring')
 var request = require('request')
 var router = express.Router();
 
-var ACCESS_TOKEN = ''
+global.ACCESS_TOKEN = ''
 var CLIENT_ID =	'95f68d4acb7a4d11a6ca524098a24e49'
 var CLIENT_SECRET =	'0b7433973f0340508aa266cf6b12636a'
 var WEBSITE_URL =	'http://localhost:3000'
@@ -41,9 +41,10 @@ router.get('/auth/finalize', function(req, res){
   }
 
   request.post(options, function(error, response, body) {
-    var data = JSON.parse(body)
+    data = JSON.parse(body)
     ACCESS_TOKEN = data.access_token
-    res.redirect('/dashboard')
+    global.username = data.user.username
+    res.redirect('/search') //switch this back to dashboard
   })
 })
 

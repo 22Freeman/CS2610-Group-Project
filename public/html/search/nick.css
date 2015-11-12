@@ -118,7 +118,7 @@ text-align: left;
 }
 
 .box {
-  width: 273px;
+  width: 275px;
   border: solid 1px #CCC;
   float: left;
   padding: 5px;
@@ -128,8 +128,10 @@ text-align: left;
 .box img {
   display: block;
   margin: 0 0 10px 0;
-  width: 272px;
-  height: 165px;
+  /*width: 272px;
+  height: 165px;*/
+  width: 274px;
+  height: 250px;
 }
 
 .ns-image {
