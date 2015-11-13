@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en/us">
+<head>
+  <title>Dashboard</title>
+  <meta name = "charset" content="utf-8">
+
+  <link rel="stylesheet" type="text/css" href="/html/dashboard/ryan.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+  <!--<script src="/html/dashboard/ryan.js"></script>-->
+</head>
+<body>
+  <div class="container">
+  <header>
+  <div class="navbar">
+    <div class="navbar-upper"><h1>Googlegram+</h1></div>
+    <div class="navbar-lower">
+      <div class="navbar-item first-child"><a href="../../">Home</a></div>
+      <div class="navbar-item"><a href="">Dashboard</a></div>
+      <div class="navbar-item"><a href="../profile">Profile</a></div>
+      <div class="navbar-item last-child"><a href="../search">Search</a></div>
+    </div>
+  </div>
+</header>
+<p class="welcome-text">Welcome <i><b>{{name}}</b></i> to the Dashboard!</p>
+<div class ="rf-imageTable">
+  <div class="rf-table">
+    <div class="box-wrap">
+      <div id ="rf-boxes" class="boxes">
+      <a href="{{link1}}"> <img src="{{URL1}}"></a>
+        <div class="rf-button">
+          <button class="rf-buttonLeft" onclick="location.href='{{link1}}'">{{likes1}}<i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" onclick="location.href='{{link1}}'">{{comments1}} <i class="fa fa-comments"></i></button>
+        </div>
+      </div>
+      <div id ="rf-boxes" class="boxes">
+        <a href="{{link2}}"> <img src="{{URL2}}"></a>
+        <div class="rf-button">
+          <button class="rf-buttonLeft" onclick="location.href='{{link2}}'">{{likes2}} <i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" onclick="location.href='{{link2}}'">{{comments2}} <i class="fa fa-comments"></i></button>
+        </div>
+      </div>
+      <div id ="rf-boxes" class="boxes">
+        <a href="{{link3}}"> <img src="{{URL3}}"></a>
+        <div class="rf-button">
+          <button class="rf-buttonLeft" onclick="location.href='{{link3}}'">{{likes3}}<i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" onclick="location.href='{{link3}}'">{{comments3}} <i class="fa fa-comments"></i></button>
+        </div>
+      </div>
+      <div id ="rf-boxes" class="boxes">
+        <a href="{{link4}}"> <img src="{{URL4}}"></a>
+        <div class="rf-button">
+          <button class="rf-buttonLeft" onclick="location.href='{{link4}}'">{{likes4}} <i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" onclick="location.href='{{link4}}'">{{comments4}} <i class="fa fa-comments"></i></button>
+        </div>
+      </div>
+      <div id ="rf-boxes" class="boxes">
+        <a href="{{link5}}"> <img src="{{URL5}}"></a>
+        <div class="rf-button">
+          <button class="rf-buttonLeft" onclick="location.href='{{link5}}'">{{likes5}}<i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" onclick="location.href='{{link5}}'">{{comments5}} <i class="fa fa-comments"></i></button>
+        </div>
+      </div>
+      <div id ="rf-boxes" class="boxes">
+        <a href="{{link6}}"> <img src="{{URL6}}"></a>
+        <div class="rf-button">
+          <button class="rf-buttonLeft" onclick="location.href='{{link6}}'">{{likes6}}<i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" onclick="location.href='{{link6}}'">{{comments6}} <i class="fa fa-comments"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+	$('.rf_image').rf_image_box();
+});
+</script>
+</body>
+</html>

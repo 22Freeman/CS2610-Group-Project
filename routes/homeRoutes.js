@@ -44,7 +44,7 @@ router.get('/auth/finalize', function(req, res){
     data = JSON.parse(body)
     ACCESS_TOKEN = data.access_token
     global.username = data.user.username
-    res.redirect('/search') //switch this back to dashboard
+    res.redirect('/dashboard') //switch this back to dashboard
   })
 })
 
