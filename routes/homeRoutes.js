@@ -10,9 +10,16 @@ var WEBSITE_URL =	'http://localhost:3000'
 var REDIRECT_URI =	'http://localhost:3000/auth/finalize'
 
 router.get('/', function(req, res){
-  res.render('home', {
-    title:'Googlegram+'
-  })
+  if (ACCESS_TOKEN != "")
+  {
+    res.redirect('/dashboard')
+  }
+  else {
+    res.render('home', {
+      title:'Googlegram+'
+    })
+  }
+
 });
 
 router.post('/', function(req, res){
