@@ -36,7 +36,6 @@ body {
   vertical-align: middle;
   background-color: #1a1717;
   padding-left: 9%;
-
 }
 
 .navbar-upper {
@@ -71,6 +70,7 @@ text-align: left;
   display: inline-block;
   padding-right: 10px;
   padding-left: 10px;
+  font-weight: normal;
   font-size: 18px;
   margin-left: 5px;
 }
