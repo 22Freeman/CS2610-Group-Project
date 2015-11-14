@@ -1,31 +1,35 @@
-var express = require('express');
+var express = require('express')
 var querystring = require('querystring')
 var request = require('request')
+var session = require('express-session')
 var router = express.Router();
+var cfg = require('../config.js')
 
-global.ACCESS_TOKEN = ''
-var CLIENT_ID =	'95f68d4acb7a4d11a6ca524098a24e49'
-var CLIENT_SECRET =	'0b7433973f0340508aa266cf6b12636a'
-var WEBSITE_URL =	'http://localhost:3000'
-var REDIRECT_URI =	'http://localhost:3000/auth/finalize'
+router.use(session({
+  cookieName: 'session',
+  secret: 'asdfasd;lkjweiovnxc,kmeuinf',
+  resave: false,
+  saveUninitialized: true
+}))
+
+/*router.use(function(req, res) {
+  if(req.session.access_token !== "")
+  {
+    console.log(access_token)
+  }
+})*/
 
 router.get('/', function(req, res){
-  if (ACCESS_TOKEN != "")
-  {
-    res.redirect('/dashboard')
-  }
-  else {
+
     res.render('home', {
       title:'Googlegram+'
     })
-  }
-
 });
 
 router.post('/', function(req, res){
   var authorize = {
-    client_id: CLIENT_ID,
-    redirect_uri: REDIRECT_URI,
+    client_id: cfg.client_id,
+    redirect_uri: cfg.redirect_uri,
     response_type: 'code'
   }
   //https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=code
@@ -35,21 +39,21 @@ router.post('/', function(req, res){
 
 router.get('/auth/finalize', function(req, res){
   var post_data = {
-      client_id: CLIENT_ID,
-      client_secret: CLIENT_SECRET,
-      redirect_uri: REDIRECT_URI,
+      client_id: cfg.client_id,
+      client_secret: cfg.client_secret,
+      redirect_uri: cfg.redirect_uri,
       grant_type: 'authorization_code',
       code: req.query.code
   }
 
   var options = {
-    url: 'https://api.instagram.com/oauth/access_token',
+    uri: 'https://api.instagram.com/oauth/access_token',
     form: post_data
   }
 
   request.post(options, function(error, response, body) {
     data = JSON.parse(body)
-    ACCESS_TOKEN = data.access_token
+    req.session.access_token = data.access_token
     global.username = data.user.username
     res.redirect('/dashboard') //switch this back to dashboard
   })
