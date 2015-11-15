@@ -18,30 +18,7 @@ router.get('/', function(req, res){
         res.render('dashboard', {
           title: 'Googlegram+',
           name: req.session.userSessionInfo,
-          URL1: feed.data[0].images.standard_resolution.url,
-          URL2: feed.data[1].images.standard_resolution.url,
-          URL3: feed.data[2].images.standard_resolution.url,
-          URL4: feed.data[3].images.standard_resolution.url,
-          URL5: feed.data[4].images.standard_resolution.url,
-          URL6: feed.data[5].images.standard_resolution.url,
-          link1: feed.data[0].link,
-          link2: feed.data[1].link,
-          link3: feed.data[2].link,
-          link4: feed.data[3].link,
-          link5: feed.data[4].link,
-          link6: feed.data[5].link,
-          likes1: feed.data[0].likes.count,
-          likes2: feed.data[1].likes.count,
-          likes3: feed.data[2].likes.count,
-          likes4: feed.data[3].likes.count,
-          likes5: feed.data[4].likes.count,
-          likes6: feed.data[5].likes.count,
-          comments1: feed.data[0].comments.count,
-          comments2: feed.data[1].comments.count,
-          comments3: feed.data[2].comments.count,
-          comments4: feed.data[3].comments.count,
-          comments5: feed.data[4].comments.count,
-          comments6: feed.data[5].comments.count,
+          feed: feed.data
         });
       }
       else {

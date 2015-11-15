@@ -27,48 +27,15 @@
 <div class ="rf-imageTable">
   <div class="rf-table">
     <div class="box-wrap">
+      {{#each feed}}
       <div id ="rf-boxes" class="boxes">
-      <a href="{{link1}}"> <img src="{{URL1}}"></a>
+        <a href="{{this.link}}"> <img src="{{this.images.standard_resolution.url}}"></a>
         <div class="rf-button">
-          <button class="rf-buttonLeft" onclick="location.href='{{link1}}'">{{likes1}}<i class="fa fa-thumbs-up"></i></button>
-          <button class="rf-buttonRight" onclick="location.href='{{link1}}'">{{comments1}} <i class="fa fa-comments"></i></button>
+          <button class="rf-buttonLeft" onclick="location.href='{{this.link}}'">{{this.likes.count}}<i class="fa fa-thumbs-up"></i></button>
+          <button class="rf-buttonRight" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
         </div>
       </div>
-      <div id ="rf-boxes" class="boxes">
-        <a href="{{link2}}"> <img src="{{URL2}}"></a>
-        <div class="rf-button">
-          <button class="rf-buttonLeft" onclick="location.href='{{link2}}'">{{likes2}} <i class="fa fa-thumbs-up"></i></button>
-          <button class="rf-buttonRight" onclick="location.href='{{link2}}'">{{comments2}} <i class="fa fa-comments"></i></button>
-        </div>
-      </div>
-      <div id ="rf-boxes" class="boxes">
-        <a href="{{link3}}"> <img src="{{URL3}}"></a>
-        <div class="rf-button">
-          <button class="rf-buttonLeft" onclick="location.href='{{link3}}'">{{likes3}}<i class="fa fa-thumbs-up"></i></button>
-          <button class="rf-buttonRight" onclick="location.href='{{link3}}'">{{comments3}} <i class="fa fa-comments"></i></button>
-        </div>
-      </div>
-      <div id ="rf-boxes" class="boxes">
-        <a href="{{link4}}"> <img src="{{URL4}}"></a>
-        <div class="rf-button">
-          <button class="rf-buttonLeft" onclick="location.href='{{link4}}'">{{likes4}} <i class="fa fa-thumbs-up"></i></button>
-          <button class="rf-buttonRight" onclick="location.href='{{link4}}'">{{comments4}} <i class="fa fa-comments"></i></button>
-        </div>
-      </div>
-      <div id ="rf-boxes" class="boxes">
-        <a href="{{link5}}"> <img src="{{URL5}}"></a>
-        <div class="rf-button">
-          <button class="rf-buttonLeft" onclick="location.href='{{link5}}'">{{likes5}}<i class="fa fa-thumbs-up"></i></button>
-          <button class="rf-buttonRight" onclick="location.href='{{link5}}'">{{comments5}} <i class="fa fa-comments"></i></button>
-        </div>
-      </div>
-      <div id ="rf-boxes" class="boxes">
-        <a href="{{link6}}"> <img src="{{URL6}}"></a>
-        <div class="rf-button">
-          <button class="rf-buttonLeft" onclick="location.href='{{link6}}'">{{likes6}}<i class="fa fa-thumbs-up"></i></button>
-          <button class="rf-buttonRight" onclick="location.href='{{link6}}'">{{comments6}} <i class="fa fa-comments"></i></button>
-        </div>
-      </div>
+      {{/each}}
     </div>
   </div>
 </div>

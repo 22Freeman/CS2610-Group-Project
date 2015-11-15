@@ -37,60 +37,14 @@
 
         <div class="box-container">
         <p class="center-text">Showing results for <b>#{{tagName}}</b></p>
-
+          {{#each feed}}
           <div class="box">
-            <a href="{{link1}}"> <img src="{{imgURL1}}"></a>
+            <a href="{{this.link}}"> <img src="{{this.images.standard_resolution.url}}"></a>
             <div class="hr-image"><hr></div>
-            <button class="btn-comments btn-left" onclick="location.href='{{link1}}'">{{likes1}} <i class="fa fa-heart"></i></button>
-            <button class="btn-comments btn-right" onclick="location.href='{{link1}}'">{{comments1}} <i class="fa fa-comments"></i></button>          </div>
-          <div class="box">
-            <a href="{{link2}}"> <img src="{{imgURL2}}"></a>
-            <div class="hr-image"><hr></div>
-            <button class="btn-comments btn-left" onclick="location.href='{{link2}}'">{{likes2}} <i class="fa fa-heart"></i></button>
-            <button class="btn-comments btn-right" onclick="location.href='{{link2}}'">{{comments2}} <i class="fa fa-comments"></i></button>
+            <button class="btn-comments btn-left" onclick="location.href='{{this.link}}'">{{this.likes.count}} <i class="fa fa-heart"></i></button>
+            <button class="btn-comments btn-right" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
           </div>
-          <div class="box">
-            <a href="{{link3}}"> <img src="{{imgURL3}}"></a>
-            <div class="hr-image"><hr></div>
-            <button class="btn-comments btn-left" onclick="location.href='{{link3}}'">{{likes3}} <i class="fa fa-heart"></i></button>
-            <button class="btn-comments btn-right" onclick="location.href='{{link3}}'">{{comments3}} <i class="fa fa-comments"></i></button>
-          </div>
-          <div class="box">
-            <a href="{{link4}}"> <img src="{{imgURL4}}"></a>
-            <div class="hr-image"><hr></div>
-            <button class="btn-comments btn-left" onclick="location.href='{{link4}}'">{{likes4}} <i class="fa fa-heart"></i></button>
-            <button class="btn-comments btn-right" onclick="location.href='{{link4}}'">{{comments4}} <i class="fa fa-comments"></i></button>
-          </div>
-          <div class="box">
-            <a href="{{link5}}"> <img src="{{imgURL5}}"></a>
-            <div class="hr-image"><hr></div>
-            <button class="btn-comments btn-left" onclick="location.href='{{link5}}'">{{likes5}} <i class="fa fa-heart"></i></button>
-            <button class="btn-comments btn-right" onclick="location.href='{{link5}}'">{{comments5}} <i class="fa fa-comments"></i></button>
-          </div>
-          <div class="box">
-            <a href="{{link6}}"> <img src="{{imgURL6}}"></a>
-            <div class="hr-image"><hr></div>
-            <button class="btn-comments btn-left" onclick="location.href='{{link6}}'">{{likes6}} <i class="fa fa-heart"></i></button>
-            <button class="btn-comments btn-right" onclick="location.href='{{link6}}'">{{comments6}} <i class="fa fa-comments"></i></button>
-          </div>
-          <div class="box">
-            <a href="{{link7}}"> <img src="{{imgURL7}}"></a>
-            <div class="hr-image"><hr></div>
-            <button class="btn-comments btn-left" onclick="location.href='{{link7}}'">{{likes7}} <i class="fa fa-heart"></i></button>
-            <button class="btn-comments btn-right" onclick="location.href='{{link7}}'">{{comments7}} <i class="fa fa-comments"></i></button>
-          </div>
-          <div class="box">
-            <a href="{{link8}}"> <img src="{{imgURL8}}"></a>
-            <div class="hr-image"><hr></div>
-            <button class="btn-comments btn-left" onclick="location.href='{{link8}}'">{{likes8}} <i class="fa fa-heart"></i></button>
-            <button class="btn-comments btn-right" onclick="location.href='{{link8}}'">{{comments8}} <i class="fa fa-comments"></i></button>
-          </div>
-          <div class="box">
-            <a href="{{link9}}"> <img src="{{imgURL9}}"></a>
-            <div class="hr-image"><hr></div>
-            <button class="btn-comments btn-left" onclick="location.href='{{link9}}'">{{likes9}} <i class="fa fa-heart"></i></button>
-            <button class="btn-comments btn-right" onclick="location.href='{{link9}}'">{{comments9}} <i class="fa fa-comments"></i></button>
-          </div>
+          {{/each}}
         </div>
       </div> <!---/main -->
 
