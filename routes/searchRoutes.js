@@ -4,31 +4,31 @@ var request = require('request');
 var bodyParser = require('body-parser')
 
 router.get('/', function(req, res){
-  if (ACCESS_TOKEN == "")
+  if (req.session.access_token == undefined)
   {
-  res.redirect('/../');
+    res.redirect('/../');
   }
   else
   {
     res.render('search', {
       title:'Googlegram+',
-      name: username
+      name: req.session.userSessionInfo
     })
   }
-
 });
 
 router.use(bodyParser.urlencoded({ extended: false }));
+
 router.post('/',function(req,res){
   var term = req.body.tag;
   request({
-    url:'https://api.instagram.com/v1/tags/'+term+'/media/recent?access_token='+ACCESS_TOKEN}, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
+    url:'https://api.instagram.com/v1/tags/'+term+'/media/recent?access_token='+req.session.access_token}, function (error, response, body) {
+    if (!error && response.statusCode <= 200) {
       var info = JSON.parse(body)
       res.render('search', {
         title: 'Googlegram+',
         tagName: term,
-        name: username,
+        name: req.session.userSessionInfo,
         imgURL1: info.data[0].images.standard_resolution.url,
         imgURL2: info.data[1].images.standard_resolution.url,
         imgURL3: info.data[2].images.standard_resolution.url,
@@ -66,6 +66,10 @@ router.post('/',function(req,res){
         comments8: info.data[7].comments.count,
         comments9: info.data[8].comments.count,
       });
+    }
+    else {
+      req.session.access_token = undefined
+      res.redirect('/')
     }
   })
 });

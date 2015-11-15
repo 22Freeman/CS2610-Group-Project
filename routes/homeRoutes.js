@@ -12,18 +12,16 @@ router.use(session({
   saveUninitialized: true
 }))
 
-/*router.use(function(req, res) {
-  if(req.session.access_token !== "")
-  {
-    console.log(access_token)
-  }
-})*/
-
 router.get('/', function(req, res){
-
-    res.render('home', {
-      title:'Googlegram+'
-    })
+    if(req.session.access_token == undefined)
+    {
+      res.render('home', {
+        title:'Googlegram+'
+      })
+    }
+    else {
+      res.redirect('/dashboard')
+    }
 });
 
 router.post('/', function(req, res){
@@ -53,10 +51,27 @@ router.get('/auth/finalize', function(req, res){
 
   request.post(options, function(error, response, body) {
     data = JSON.parse(body)
-    req.session.access_token = data.access_token
-    global.username = data.user.username
-    res.redirect('/dashboard') //switch this back to dashboard
+    if(data.access_token == undefined)
+    {
+      res.redirect('/')
+    }
+    else
+    {
+      req.session.access_token = data.access_token
+      req.session.userSessionInfo = data.user.username
+      res.redirect('/dashboard') //switch this back to dashboard
+    }
   })
 })
+
+// production error handler
+// no stacktraces leaked to user
+router.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err,
+        error: {}
+    });
+});
 
 module.exports = router
