@@ -30,21 +30,13 @@ router.get('/', function(req, res){
   }
 });
 
-
-router.post('/', function(req,res) {
-      var user = req.body
-      Users.insert( user, function(result){
-         req.session.userId = result.ops[0]._id
-         res.redirect('/update')
-      })
-})
-
 router.get('/update', function(req,res) {
    if(req.session.userId) {
       Users.find(req.session.userId, function(document) {
          if(!document) return res.redirect('/')
-         res.render('update', {
-            user: document
+         res.render('profile', {
+           title:'Googlegram+',
+           user: req.session.userSessionInfo
          })
       })
    }
@@ -55,10 +47,15 @@ router.get('/update', function(req,res) {
 
 router.post('/update', function(req,res) {
    var user = req.body
+   user._id = req.session.userId
+   console.log(user);
    Users.update(user, function(result) {
-      res.render('update', {
-         user:user,
-         success: 'User updated successfully'
+     Users.find(req.session.userId, function(document) {
+        if(!document) return res.redirect('/')
+        res.render('profile', {
+          title:'Googlegram+',
+          user: document
+        })
       })
    })
 })
