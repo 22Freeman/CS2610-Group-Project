@@ -1,3 +1,4 @@
+var ObjectId = require('mongodb').ObjectId
 var assert = require('assert')
 var db = require('../db')
 
@@ -23,4 +24,52 @@ exports.find = function(id, callback) {
     console.log('Found 1 user document')
     callback(document)
   })
+}
+
+exports.update = function(user, callback) {
+  // Get the users collection
+  var collection = db.get().collection('users')
+  user._id = ObjectId(user._id)
+  // Update the user
+  collection.update({'_id': user._id},
+    { $set: user },
+    function(err, result) {
+      assert.equal(err, null)
+      assert.equal(1, result.result.n)
+      console.log('Updated 1 document in the users collection')
+      callback()
+    }
+  )
+}
+
+exports.addTag = function(userId, tag, callback) {
+  // Get the users collection
+  var collection = db.get().collection('users')
+  // Add the tag
+  collection.update(
+    {'_id': userId},
+    { $push: { tags: tag }},
+    function(err, result) {
+      assert.equal(err, null)
+      assert.equal(1, result.result.n)
+      console.log('Added 1 tag to a document in the users collection')
+      callback()
+    }
+  )
+}
+
+exports.removeTag = function(userId, tag, callback) {
+  // Get the users collection
+  var collection = db.get().collection('users')
+  // Add the tag
+  collection.update(
+    {'_id': userId},
+    { $pull: { tags: tag }},
+    function(err, result) {
+      assert.equal(err, null)
+      assert.equal(1, result.result.n)
+      console.log('Added 1 tag to a document in the users collection')
+      callback()
+    }
+  )
 }

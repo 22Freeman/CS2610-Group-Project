@@ -15,10 +15,10 @@
     <div class="navbar">
       <div class="navbar-upper"><h1>Googlegram+</h1></div>
       <div class="navbar-lower">
-        <div class="navbar-item first-child"><a href="../../">Home</a></div>
-        <div class="navbar-item"><a href="../dashboard">Dashboard</a></div>
-        <div class="navbar-item"><a href="../profile">Profile</a></div>
-        <div class="navbar-item"><a href="">Search</a></div>
+        <div class="navbar-item first-child"><a href="/">Home</a></div>
+        <div class="navbar-item"><a href="/dashboard">Dashboard</a></div>
+        <div class="navbar-item"><a href="/profile">Profile</a></div>
+        <div class="navbar-item"><a href="/search">Search</a></div>
       </div>
     </div>
   </header>
@@ -28,15 +28,80 @@
       <div id="ohsnap"></div>
       <div class="main">
         <h3>Search Instagram:</h3>
-        <p class="welcome-text"><i class="fa fa-user"></i> <i><b>{{name}}</b> | <a href="../profile/">Edit Profile</a></i></p>
+        <p class="welcome-text"><i class="fa fa-user"></i> <i><b>{{name}}</b> | <a href="/profile">Edit Profile</a></i></p>
+        <div class="button-container">
         <form id="search" method="post" action="/search">
           <input type="text" placeholder="" class="ns-textinput" name="tag" size="21" maxlength="120" value = "{{tagName}}">
           <input type="submit" value="Search" class="ns-btn ns-btn-search">
-          <button class="ns-btn ns-btn-savesearch" text="button" type="button">Save Search</button>
         </form>
+        <form id="search" method="post" action="/search/tag/add">
+          <input type="hidden" name="tag" value = "{{tagName}}">
+          <input type="submit" value="Save Search" class="ns-btn ns-btn-savesearch">
+        </form>
+      </div>
+
 
         <div class="box-container">
+
+        {{#if tagName}}
         <p class="center-text">Showing results for <b>#{{tagName}}</b></p>
+        {{else}}
+        <p class="center-text">Not displaying any results</b></p>
+        <div class="box">
+          <a href=""> <img src="http://static1.squarespace.com/static/51f64a14e4b0de43ba642a1d/559d45e2e4b0f2834cbc4b7a/559d45eee4b0a6ed5cd8369e/1436370414650/grey+box+placeholder.gif"></a>
+          <div class="hr-image"><hr></div>
+          <button class="btn-comments btn-left" onclick="location.href='{{this.link}}'">{{this.likes.count}} <i class="fa fa-heart"></i></button>
+          <button class="btn-comments btn-right" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
+        </div>
+        <div class="box">
+          <a href=""> <img src="http://static1.squarespace.com/static/51f64a14e4b0de43ba642a1d/559d45e2e4b0f2834cbc4b7a/559d45eee4b0a6ed5cd8369e/1436370414650/grey+box+placeholder.gif"></a>
+          <div class="hr-image"><hr></div>
+          <button class="btn-comments btn-left" onclick="location.href='{{this.link}}'">{{this.likes.count}} <i class="fa fa-heart"></i></button>
+          <button class="btn-comments btn-right" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
+        </div>
+        <div class="box">
+          <a href=""> <img src="http://static1.squarespace.com/static/51f64a14e4b0de43ba642a1d/559d45e2e4b0f2834cbc4b7a/559d45eee4b0a6ed5cd8369e/1436370414650/grey+box+placeholder.gif"></a>
+          <div class="hr-image"><hr></div>
+          <button class="btn-comments btn-left" onclick="location.href='{{this.link}}'">{{this.likes.count}} <i class="fa fa-heart"></i></button>
+          <button class="btn-comments btn-right" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
+        </div>
+        <div class="box">
+          <a href=""> <img src="http://static1.squarespace.com/static/51f64a14e4b0de43ba642a1d/559d45e2e4b0f2834cbc4b7a/559d45eee4b0a6ed5cd8369e/1436370414650/grey+box+placeholder.gif"></a>
+          <div class="hr-image"><hr></div>
+          <button class="btn-comments btn-left" onclick="location.href='{{this.link}}'">{{this.likes.count}} <i class="fa fa-heart"></i></button>
+          <button class="btn-comments btn-right" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
+        </div>
+        <div class="box">
+          <a href=""> <img src="http://static1.squarespace.com/static/51f64a14e4b0de43ba642a1d/559d45e2e4b0f2834cbc4b7a/559d45eee4b0a6ed5cd8369e/1436370414650/grey+box+placeholder.gif"></a>
+          <div class="hr-image"><hr></div>
+          <button class="btn-comments btn-left" onclick="location.href='{{this.link}}'">{{this.likes.count}} <i class="fa fa-heart"></i></button>
+          <button class="btn-comments btn-right" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
+        </div>
+        <div class="box">
+          <a href=""> <img src="http://static1.squarespace.com/static/51f64a14e4b0de43ba642a1d/559d45e2e4b0f2834cbc4b7a/559d45eee4b0a6ed5cd8369e/1436370414650/grey+box+placeholder.gif"></a>
+          <div class="hr-image"><hr></div>
+          <button class="btn-comments btn-left" onclick="location.href='{{this.link}}'">{{this.likes.count}} <i class="fa fa-heart"></i></button>
+          <button class="btn-comments btn-right" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
+        </div>
+        <div class="box">
+          <a href=""> <img src="http://static1.squarespace.com/static/51f64a14e4b0de43ba642a1d/559d45e2e4b0f2834cbc4b7a/559d45eee4b0a6ed5cd8369e/1436370414650/grey+box+placeholder.gif"></a>
+          <div class="hr-image"><hr></div>
+          <button class="btn-comments btn-left" onclick="location.href='{{this.link}}'">{{this.likes.count}} <i class="fa fa-heart"></i></button>
+          <button class="btn-comments btn-right" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
+        </div>
+        <div class="box">
+          <a href=""> <img src="http://static1.squarespace.com/static/51f64a14e4b0de43ba642a1d/559d45e2e4b0f2834cbc4b7a/559d45eee4b0a6ed5cd8369e/1436370414650/grey+box+placeholder.gif"></a>
+          <div class="hr-image"><hr></div>
+          <button class="btn-comments btn-left" onclick="location.href='{{this.link}}'">{{this.likes.count}} <i class="fa fa-heart"></i></button>
+          <button class="btn-comments btn-right" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
+        </div>
+        <div class="box">
+          <a href=""> <img src="http://static1.squarespace.com/static/51f64a14e4b0de43ba642a1d/559d45e2e4b0f2834cbc4b7a/559d45eee4b0a6ed5cd8369e/1436370414650/grey+box+placeholder.gif"></a>
+          <div class="hr-image"><hr></div>
+          <button class="btn-comments btn-left" onclick="location.href='{{this.link}}'">{{this.likes.count}} <i class="fa fa-heart"></i></button>
+          <button class="btn-comments btn-right" onclick="location.href='{{this.link}}'">{{this.comments.count}} <i class="fa fa-comments"></i></button>
+        </div>
+        {{/if}}
           {{#each feed}}
           <div class="box">
             <a href="{{this.link}}"> <img src="{{this.images.standard_resolution.url}}"></a>
@@ -52,11 +117,20 @@
       <div class="side">
         <h3> Saved Searches </h3>
           <div class = "itemlist">
-            <button class="btn-ss" text="button" type="button">#earthpictures</button>
-            <button class="btn-ss" text="button" type="button">#happy</button>
-            <button class="btn-ss" text="button" type="button">#technology</button>
-            <button class="btn-ss" text="button" type="button">#atom</button>
-            <button class="btn-ss" text="button" type="button">#puppies</button>
+{{#if user.tags}}
+  {{#each user.tags}}
+  <div class="search-container">
+  <form action="/search" method="post">
+    <input type="hidden" name="tag" value="{{this}}">
+    <button class="btn-ss" text="button" type="submit">#{{this}}</button>
+  </form>
+  <form action="/search/tag/remove" method="post">
+    <input type="hidden" name="tag" value="{{this}}">
+    <button class="btn-ss-x" text="button" type="submit">X</button>
+  </form>
+</div>
+  {{/each}}
+{{/if}}
           </div>
        </div> <!-- /side -->
     </div> <!-- /body -->

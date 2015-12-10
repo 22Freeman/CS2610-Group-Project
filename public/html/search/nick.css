@@ -85,7 +85,7 @@ text-align: left;
 }
 
 .main {
-  max-width: 929px;
+  max-width: 904px;
   float: left;
   padding:15px;
   border-bottom-left-radius: 5px;
@@ -99,7 +99,7 @@ text-align: left;
 .side {
   padding:15px;
   border-bottom-right-radius: 5px;
-  width: 160px;
+  width: 185px;
   float: left;
   text-align: center;
 }
@@ -118,7 +118,7 @@ text-align: left;
 }
 
 .box {
-  width: 275px;
+  width: 265px;
   border: solid 1px #CCC;
   float: left;
   padding: 5px;
@@ -130,7 +130,7 @@ text-align: left;
   margin: 0 0 10px 0;
   /*width: 272px;
   height: 165px;*/
-  width: 274px;
+  width: 265px;
   height: 250px;
 }
 
@@ -179,6 +179,26 @@ text-align: left;
 /*leave empty do not delete*/
 }
 
+.button-container form,
+.button-container form div {
+    display: inline;
+}
+
+.button-container button {
+    display: inline;
+    vertical-align: middle;
+}
+
+.search-container form,
+.search-container form div {
+    display: inline;
+}
+
+.search-container button {
+    display: inline;
+    vertical-align: middle;
+}
+
 .btn-comments {
   padding: 5px 10px;
   color: #ffffff;
@@ -211,7 +231,25 @@ text-align: left;
   border: 2px solid;
 }
 
+.btn-ss-x {
+  padding: 5px 2px;
+  color: #ffffff;
+  border: solid 1px #4A924A;
+  background: #5bb75b;
+  border-radius: 2px;
+
+  color: #51A451;
+  font-weight: bold;
+  background: #FFF;
+  font-size: 15px;
+  border: 2px solid;
+}
+
 .btn-ss:hover {
+  background: #F0F0F0 ;
+}
+
+.btn-ss-x:hover {
   background: #F0F0F0 ;
 }
 
