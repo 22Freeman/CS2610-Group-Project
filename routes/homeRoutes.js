@@ -4,6 +4,7 @@ var request = require('request')
 var session = require('express-session')
 var router = express.Router();
 var cfg = require('../config.js')
+var Users = require('../models/users')
 
 router.use(session({
   cookieName: 'session',
@@ -51,6 +52,7 @@ router.get('/auth/finalize', function(req, res){
 
   request.post(options, function(error, response, body) {
     data = JSON.parse(body)
+    var user = data.user
     if(data.access_token == undefined)
     {
       res.redirect('/')
@@ -59,7 +61,23 @@ router.get('/auth/finalize', function(req, res){
     {
       req.session.access_token = data.access_token
       req.session.userSessionInfo = data.user.username
-      res.redirect('/dashboard') //switch this back to dashboard
+      req.session.userId = data.user.id
+
+
+      user._id = user.id
+      delete user.id
+
+       Users.find(user._id, function(document) {
+         if (!document) {
+           Users.insert(user, function(result) {
+             res.redirect('/dashboard')
+           })
+         } else {
+           res.redirect('/dashboard')
+         }
+       })
+
+      //res.redirect('/dashboard') //switch this back to dashboard
     }
   })
 })

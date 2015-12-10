@@ -18,7 +18,6 @@ router.get('/', function(req, res){
 });
 
 router.use(bodyParser.urlencoded({ extended: false }));
-
 router.post('/',function(req,res){
   var term = req.body.tag;
   request({
