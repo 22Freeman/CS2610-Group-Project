@@ -82,6 +82,18 @@ h2
 
 }
 
+input.tn-username
+{
+   display:block;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top: 10px;
+   margin-bottom:5px;
+   border-radius:5px;
+   padding:5px;
+   border: solid gray 1px;
+}
+
 input.tn-name
 {
   display:block;
@@ -154,7 +166,7 @@ button.tn-button{
   width: 1150px;
   margin: 0 auto;
   background:#ffffff;
-  height: 550px;
+  height: 650px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
