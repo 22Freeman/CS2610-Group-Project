@@ -60,7 +60,7 @@ router.get('/auth/finalize', function(req, res){
     else
     {
       req.session.access_token = data.access_token
-      req.session.userSessionInfo = data.user.username
+      req.session.userSessionInfo = data.user
       req.session.userId = data.user.id
 
 

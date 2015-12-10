@@ -14,14 +14,14 @@
 </header>
 
 <form class="tn-main" action="" method="post">
-  <h2>{{user}}</h2>
+  <h2>{{user.username}}</h2>
   <!-- http://www.skyovnis.com/wp-content/uploads/2014/12/Profile-sky-ovnis.jpg -->
-  <img class="tn-image" src="{{data.data.profile_picture}}" id="circle" height="140px" width="140px"></img>
+  <img class="tn-image" src="{{user.profile_picture}}" id="circle" height="140px" width="140px"></img>
   <!-- <a href="{{this.link}}"> <img src="{{this.user.profile_picture}}" id="circle" height="140px" width="140px"></a> -->
-  <input class="tn-username" type="text" name="username" value="" placeholder="Username"></input>
-  <input class="tn-name" type="text" name="name" value="" placeholder="Full Name"></input>
-  <input class="tn-email" type="text" size="30" name="email" value="" placeholder="Email Address"></input>
-  <textarea class="tn-bio" type="textarea" name="bio" value="" placeholder="Bio" cols="30" rows="5"></textarea>
+  <input class="tn-username" type="text" name="username" value="{{user.username}}" placeholder="Username"></input>
+  <input class="tn-name" type="text" name="name" value="{{user.full_name}}" placeholder="Full Name"></input>
+  <input class="tn-email" type="text" size="30" name="website" value="{{user.website}}" placeholder="Website"></input>
+  <textarea class="tn-bio" type="textarea" name="bio" value="{{user.bio}}" placeholder="Bio" cols="30" rows="5"></textarea>
   <button class="tn-button" type="submit">SAVE</button>
 </form>
 

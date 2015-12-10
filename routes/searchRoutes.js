@@ -26,7 +26,7 @@ router.get('/', function(req, res){
               res.render('search', {
                 title:'Googlegram+',
                 tagName: term,
-                name: req.session.userSessionInfo,
+                userInfo: req.session.userSessionInfo,
                 user: document,
                 feed: info.data
               })
