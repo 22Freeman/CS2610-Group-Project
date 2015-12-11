@@ -79,6 +79,7 @@ router.post('/',function(req,res){
 
 router.post('/tag/add', function(req, res) {
   var tag = req.body.tag;
+  if (tag) {
   console.log('Tag is ' + tag)
   var userId = req.session.userId
   //Add the tag to the user
@@ -95,6 +96,12 @@ router.post('/tag/add', function(req, res) {
       })
     });
   })
+}
+else {
+  {
+    res.redirect('/search')
+  }
+}
 })
 
 router.post('/tag/remove', function(req, res) {
