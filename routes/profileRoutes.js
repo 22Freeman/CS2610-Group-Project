@@ -23,9 +23,12 @@ router.get('/', function(req, res){
   }
   else
   {
-    res.render('profile', {
-      title:'Googlegram+',
-      user: req.session.userSessionInfo
+    Users.find(req.session.userId, function(document) {
+       if(!document) return res.redirect('/')
+       res.render('profile', {
+         title:'Googlegram+',
+         user: document
+       })
     })
   }
 });
@@ -52,10 +55,7 @@ router.post('/update', function(req,res) {
    Users.update(user, function(result) {
      Users.find(req.session.userId, function(document) {
         if(!document) return res.redirect('/')
-        res.render('profile', {
-          title:'Googlegram+',
-          user: document
-        })
+        res.redirect('/profile')
       })
    })
 })

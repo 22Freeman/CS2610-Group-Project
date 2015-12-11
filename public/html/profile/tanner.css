@@ -78,8 +78,8 @@ h2
   text-align:center;
   color:#ffffff;
   margin-top: 15px;
-  margin-bottom:15px;
-
+  margin-bottom:30px;
+  font-weight: bold;
 }
 
 input.tn-username
@@ -92,6 +92,7 @@ input.tn-username
    border-radius:5px;
    padding:5px;
    border: solid gray 1px;
+   width: 185px;
 }
 
 input.tn-name
@@ -99,15 +100,15 @@ input.tn-name
   display:block;
   margin-left:auto;
   margin-right:auto;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom:5px;
   border-radius:5px;
   padding:5px;
   border: solid gray 1px;
-
+  width: 185px;
 }
 
-input.tn-email{
+input.tn-website{
   display:block;
   margin-left:auto;
   margin-right:auto;
@@ -116,7 +117,7 @@ input.tn-email{
   border-radius:5px;
   padding:5px;
   border: solid gray 1px;
-
+  width: 185px;
 }
 
 textarea.tn-bio{
@@ -126,7 +127,9 @@ textarea.tn-bio{
   border-radius:5px;
   padding:5px;
   border: solid gray 1px;
-
+  height: 70px;
+  width: 185px;
+  text-align: top;
 }
 
 img.tn-image{
@@ -139,7 +142,6 @@ img.tn-image{
 button.tn-button{
   padding: 5px 15px;
 	font-size:14px;
-	color: gray;
 	border: solid 1px #4A924A;
 	background: #ffffff;
   border-radius: 5px;
@@ -147,8 +149,16 @@ button.tn-button{
   margin-left:auto;
   margin-right:auto;
   display:block;
-
 }
+
+button.tn-button:hover {
+  background: #E8E8E8;
+}
+
+button.tn-button:active {
+  background: #D0D0D0;
+}
+
 .tn-main
 {
   width: 450px;
